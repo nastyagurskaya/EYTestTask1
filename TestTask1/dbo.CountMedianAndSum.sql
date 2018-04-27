@@ -1,0 +1,6 @@
+﻿CREATE PROCEDURE CountMedianAndSum
+AS
+SELECT MAX(d.DoubleNum) AS DoubleMedian
+FROM
+(SELECT TOP 50 PERCENT DoubleNum FROM FileLine ORDER BY DoubleNum) d;
+SELECT SUM(CAST(IntNum AS BIGINT)) AS SumOfInt FROM FileLine;
