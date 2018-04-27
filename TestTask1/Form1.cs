@@ -66,7 +66,7 @@ namespace TestTask1
         private void generateFiles_Click(object sender, EventArgs e)
         {
             if (lineTextBox.Text != "" && Int32.TryParse(lineTextBox.Text, out lineNum)) lineNum = Convert.ToInt32(lineTextBox.Text);
-            if (fileTextBox.Text != "" && Int32.TryParse(fineTextBox.Text, out fileNum)) lineNum = Convert.ToInt32(fileTextBox.Text);
+            if (fileTextBox.Text != "" && Int32.TryParse(fineTextBox.Text, out fileNum)) fileNum = Convert.ToInt32(fileTextBox.Text);
             for (int i = 0;i< fileNum; i++)
             {
                 using (StreamWriter bw = new StreamWriter(new FileStream(i + ".txt", FileMode.Create))){
